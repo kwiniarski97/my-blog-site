@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>karoldevblog.me - blog o programowaniu i nie tylko.</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 31 Aug 2017 21:44:03 +0200</pubDate>
+    <lastBuildDate>Thu, 31 Aug 2017 21:44:03 +0200</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>Tworzenie własnej strony z użyciem Jekyll</title>
+        <description>&lt;h2 id=&quot;wprowadzenie&quot;&gt;Wprowadzenie&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; jest to prosty generator stron statycznych, który z prostych dokumentów Markdown, Textile, Liquid, HTML, i CSS tworzy niesamowite strony.
+Istnieje możliwość hostowania stron Jekyll za &lt;a href=&quot;https://pages.github.com&quot;&gt;darmo na swoim githubie&lt;/a&gt;, jeśli jednak chcemy zrobić to na VPS ten poradnik w tym pomoże. 
+&amp;lt;!–-break-–&amp;gt;
+W tym poradniku będę używał Windows 10 i Linux Ubuntu 16.04 LTS(VPS)&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;wymagania&quot;&gt;Wymagania&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;VPS z użytkownikiem z uprawnieniami roota&lt;/li&gt;
+  &lt;li&gt;Zainstalowane Ruby&lt;/li&gt;
+  &lt;li&gt;Zainstalowany nginx&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pobieranie-jekyll&quot;&gt;Pobieranie Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Otwieramy CMD i przechodzimy do dowolnego katalogu w którym chcemy aby znajdowała się nasza strona. U mnie bedzię to &lt;code class=&quot;highlighter-rouge&quot;&gt;C:/&lt;/code&gt;.
+Bedąc w tym katalogu wpisujemy&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;gem install jekyll capistrano
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Następnie wpisujemy&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;jekyll new myblog
+cd myblog
+jekyll serve
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;W tym momencie po otwarciu w przeglądarce adresu &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt; powinna ukazać nam się nasza strona.&lt;/p&gt;
+
+&lt;h2 id=&quot;deploy&quot;&gt;Deploy&lt;/h2&gt;
+
+&lt;p&gt;Zamykamy nasz lokalny serwer przyciskami &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL+C&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Będąc dalej w tym folderze wpisujemy w CMD&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;cap install
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Powinno to stworzyć wymagane pliki dzięki któremu będzie możliwe deployowanie naszej strony przez SSH.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Aug 2017 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/posts/tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps</guid>
+        
+        <category>kursy</category>
+        
+        <category>linux</category>
+        
+        <category>web</category>
+        
+        <category>jekyll</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

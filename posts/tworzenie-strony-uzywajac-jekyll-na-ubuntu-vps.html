@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost:4000/favicon.ico?">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>Tworzenie własnej strony z użyciem Jekyll &#9642; karoldevblog.me - blog o programowaniu i nie tylko.</title>
+<!--
+<meta name="description" content="Jak stworzyć swoją własną stronę z użyciem Jekyll? I jak umieścić to na swoim serwerze z nginx
+">
+-->
+<meta name="description" content="Jak stworzyć swoją własną stronę z użyciem Jekyll? I jak umieścić to na swoim serwerze z nginx">
+<meta name="keywords" content="kursy, linux, web, jekyll">
+<link rel="canonical" href="http://localhost:4000/posts/tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tworzenie własnej strony z użyciem Jekyll" />
+<meta name="twitter:description" content="Jak stworzyć swoją własną stronę z użyciem Jekyll? I jak umieścić to na swoim serwerze z nginx
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tworzenie własnej strony z użyciem Jekyll">
+<meta property="og:description" content="Jak stworzyć swoją własną stronę z użyciem Jekyll? I jak umieścić to na swoim serwerze z nginx
+">
+<meta property="og:url" content="http://localhost:4000/posts/tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps">
+<meta property="og:site_name" content="karoldevblog.me - blog o programowaniu i nie tylko.">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,400italic,700,700italic">
+<style>
+    html {
+      font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="stylesheet" href="/assets/css/bf.css">
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+        <a href="/">karoldevblog.me</a>
+        <object type="image/svg+xml" data="/assets/img/logo.svg" class="logosvg">Twoja przeglądarka nie wspiera plików svg</object>
+     </div>
+       <ul>
+           <li><a href="/about">o mnie</a>
+           <li><a href="/archive">archiwum</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+       <li>
+            <a href="https://stackoverflow.com/users/7535961/karolus" target="_blank" class="smaller">
+              <span class="icon-stackoverflow"></span>
+            </a>
+       <li>
+            <a href="https://github.com/kwiniarski97" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:kwiniarski97@gmail.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+       <li>
+            <a href="#" onclick="switchTheme()" title="Zmień motyw">
+              <span class="icon-invert_colors" id="theme-switcher"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+<article class="post">
+<style>
+  .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps {
+    margin-bottom: 2em;
+  }
+  .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps::before {
+    background-image: url('https://source.unsplash.com/collection/856079/');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,100,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-container,
+  .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-container::before,
+  .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-container::after {
+    height: 25rem;
+  }
+  .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-bleed-container,
+  .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-bleed-container::before,
+  .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-container,
+        .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-container::before,
+        .tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps tworzenie-strony-uzywajac-jekyll-na-ubuntu-vps-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          Tworzenie własnej strony z użyciem Jekyll
+     </h1>
+     <div class="post-meta">
+        <span>30/08/2017</span>
+        <span>
+              <a href="/tag/kursy">#kursy</a>
+              <a href="/tag/linux">#linux</a>
+              <a href="/tag/web">#web</a>
+              <a href="/tag/jekyll">#jekyll</a>
+        </span>
+     </div>
+   </div>
+ </div>
+   <h2 id="wprowadzenie">Wprowadzenie</h2>
+<p><a href="https://jekyllrb.com">Jekyll</a> jest to prosty generator stron statycznych, który z prostych dokumentów Markdown, Textile, Liquid, HTML, i CSS tworzy niesamowite strony.
+Istnieje możliwość hostowania stron Jekyll za <a href="https://pages.github.com">darmo na swoim githubie</a>, jeśli jednak chcemy zrobić to na VPS ten poradnik w tym pomoże. 
+W tym poradniku będę używał Windows 10 i Linux Ubuntu 16.04 LTS(VPS)
+<hr />
+<h2 id="wymagania">Wymagania</h2>
+<ul>
+ <li>VPS z użytkownikiem z uprawnieniami roota
+ <li>Zainstalowane Ruby
+ <li>Zainstalowany nginx
+</ul>
+<h2 id="pobieranie-jekyll">Pobieranie Jekyll</h2>
+<p>Otwieramy CMD i przechodzimy do dowolnego katalogu w którym chcemy aby znajdowała się nasza strona. U mnie bedzię to <code class="highlighter-rouge">C:/</code>.
+Bedąc w tym katalogu wpisujemy
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre><td class="code"><pre>gem install jekyll capistrano
+</pre></table>
+</div>
+</div>
+<p>Następnie wpisujemy
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre><td class="code"><pre>jekyll new myblog
+cd myblog
+jekyll serve
+</pre></table>
+</div>
+</div>
+<p>W tym momencie po otwarciu w przeglądarce adresu <code class="highlighter-rouge">localhost:4000</code> powinna ukazać nam się nasza strona.
+<h2 id="deploy">Deploy</h2>
+<p>Zamykamy nasz lokalny serwer przyciskami <code class="highlighter-rouge">CTRL+C</code>.
+<p>Będąc dalej w tym folderze wpisujemy w CMD
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre><td class="code"><pre>cap install
+</pre></table>
+</div>
+</div>
+<p>Powinno to stworzyć wymagane pliki dzięki któremu będzie możliwe deployowanie naszej strony przez SSH.
+</article>
+<aside class="related">
+<h2>Powiązane</h2>
+<ul class="related-posts">
+</aside>
+           <footer>
+    <span></span>
+    <span>Karol Winiarski</span>
+</footer>
+       </div>
+<script type="text/javascript" src="/assets/js/theme.js"></script>
+<script type="text/javascript" src="/assets/js/barefoot.js"></script>
+    
