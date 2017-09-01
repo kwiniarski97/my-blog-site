@@ -1,10 +1,12 @@
 // Theme switcher based on CSS variables made by Fernardo Paredes
 // https://www.fdp.io/blog/2016/11/08/theming-via-css-properties/
 
-// Polyfilling Object.entries for Safari :/
-Object.entries = (object) => Object.keys(object).map(
-  (key) => [ key, object[key] ]
-)
+
+
+// // Polyfilling Object.entries for Safari :/
+// Object.entries = (object) => Object.keys(object).map(
+//   (key) => [ key, object[key] ]
+// )
 
 const isObject = (obj) => obj === Object(obj)
 
@@ -22,7 +24,7 @@ const LightTheme = {
   '--shadow-color': 'rgba(0, 0, 0, 0.1)',
   '--invert-logo-color': 'invert(0)',
   themeName: 'LightTheme'
-}
+};
 
 const NightTheme = {
   '--bg-color': '#1c1c1c',
@@ -38,9 +40,9 @@ const NightTheme = {
   '--shadow-color': 'rgba(255, 255, 255, 0.1)',
   '--invert-logo-color': 'invert(1)',
   themeName: 'NightTheme'
-}
+};
 
-const setCSSVariable = (key, value) => document.body.style.setProperty(key, value)
+const setCSSVariable = (key, value) => document.body.style.setProperty(key, value);
 
 const saveTheme = (theme) => {
   if (window.localStorage) {
